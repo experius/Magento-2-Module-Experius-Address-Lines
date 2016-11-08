@@ -1,0 +1,20 @@
+{
+  "name": "experius/addresslines",
+  "description": "",
+  "authors": [
+    {
+      "name": "Mage2Gen",
+      "email": "info@mage2gen.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {},
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Experius\\AddressLines\\": ""
+    }
+  }
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <customer>
+            <experius_address_lines>
+                <enabled>0</enabled>
+                <line1_label>Street</line1_label>
+                <line1_required>1</line1_required>
+                <line1_validation_classes>max_text_length:255,min_text_length:1</line1_validation_classes>
+                <line2_label>Housenumber</line2_label>
+                <line2_required>1</line2_required>
+                <line2_validation_classes>validate_number:1</line2_validation_classes>
+                <line3_label>Addition</line3_label>
+                <line3_required>0</line3_required>
+                <line3_validation_classes>max_text_length:255,min_text_length:1</line3_validation_classes>
+                <line4_label></line4_label>
+                <line4_required></line4_required>
+                <line4_validation_classes></line4_validation_classes>
+            </experius_address_lines>
+        </customer>
+    </default>
+</config>
