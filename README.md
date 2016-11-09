@@ -1,5 +1,11 @@
 Experius Address Lines,
 
-Adds labels and validation when multiple street lines are used.
+Adds labels to address lines and adds configuration per address line.
 
-Usefull for Dutch Stores
+Configuration Per Line
+
+- Required Entry Yes/No
+- Label
+- Validation Classes
+
+Stores > Configuration > Customers > Customer Confideguration > Address Lines
