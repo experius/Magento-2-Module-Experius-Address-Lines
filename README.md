@@ -8,7 +8,7 @@ Configuration Per Line
 - Label
 - Validation Classes
 
-Stores > Configuration > Customers > Customer Confideguration > Address Lines
+Stores > Configuration > Customers > Customer Configuration > Address Lines
 
 **Screenshots**
 
