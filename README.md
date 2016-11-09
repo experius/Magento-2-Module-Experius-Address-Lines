@@ -14,7 +14,11 @@ Stores > Configuration > Customers > Customer Confideguration > Address Lines
 
 Admin Settings
 
-![Alt text](view/frontend/web/images/screenshots/Admin.jpg?raw=true "")
+![Alt text](view/frontend/web/images/screenshots/Admin.png?raw=true "")
 
 
 Checkout
+
+![Alt text](view/frontend/web/images/screenshots/Checkout.png?raw=true "")
+
+![Alt text](view/frontend/web/images/screenshots/Lines.png?raw=true "")
