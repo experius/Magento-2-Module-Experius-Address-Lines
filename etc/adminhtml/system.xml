@@ -9,46 +9,58 @@
                     <label>enabled</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
-                <field id="line1_label" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
-                    <label>Line 1 Label</label>
-                </field>
-                <field id="line1_required" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="20" translate="label" type="select">
-                    <label>Line 1 Required</label>
-                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                </field>
-                <field id="line1_validation_classes" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="30" translate="label" type="text">
-                    <label>Line 1 Required</label>
-                </field>
-                <field id="line2_label" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="40" translate="label" type="text">
-                    <label>Line 2 Label</label>
-                </field>
-                <field id="line2_required" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="50" translate="label" type="select">
-                    <label>Line 2 Required</label>
-                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                </field>
-                <field id="line2_validation_classes" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="60" translate="label" type="text">
-                    <label>Line 2 Required</label>
-                </field>
-                <field id="line3_label" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="70" translate="label" type="text">
-                    <label>Line 3 Label</label>
-                </field>
-                <field id="line3_required" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="80" translate="label" type="select">
-                    <label>Line 3 Required</label>
-                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                </field>
-                <field id="line3_validation_classes" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="90" translate="label" type="text">
-                    <label>Line 3 Required</label>
-                </field>
-                <field id="line4_label" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="100" translate="label" type="text">
-                    <label>Line 4 Label</label>
-                </field>
-                <field id="line4_required" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="110" translate="label" type="select">
-                    <label>Line 4 Required</label>
-                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                </field>
-                <field id="line4_validation_classes" showInDefault="1" showInStore="1" showInWebsite="120" sortOrder="90" translate="label" type="text">
-                    <label>Line 4 Required</label>
-                </field>
+                <group id="experius_address_lines1" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="900" translate="label">
+                    <label>Line 1</label>
+                    <field id="line1_label" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+                        <label>Line 1 Label</label>
+                    </field>
+                    <field id="line1_required" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="20" translate="label" type="select">
+                        <label>Line 1 Required</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    </field>
+                    <field id="line1_validation_classes" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="30" translate="label" type="text">
+                        <label>Line 1 Validation</label>
+                    </field>
+                </group>
+                <group id="experius_address_lines2" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="900" translate="label">
+                    <label>Line 2</label>
+                    <field id="line2_label" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="40" translate="label" type="text">
+                        <label>Line 2 Label</label>
+                    </field>
+                    <field id="line2_required" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="50" translate="label" type="select">
+                        <label>Line 2 Required</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    </field>
+                    <field id="line2_validation_classes" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="60" translate="label" type="text">
+                        <label>Line 2 Validation</label>
+                    </field>
+                </group>
+                <group id="experius_address_lines3" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="900" translate="label">
+                    <label>Line 3</label>
+                    <field id="line3_label" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="70" translate="label" type="text">
+                        <label>Line 3 Label</label>
+                    </field>
+                    <field id="line3_required" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="80" translate="label" type="select">
+                        <label>Line 3 Required</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    </field>
+                    <field id="line3_validation_classes" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="90" translate="label" type="text">
+                        <label>Line 3 Validation</label>
+                    </field>
+                </group>
+                <group id="experius_address_lines4" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="900" translate="label">
+                    <label>Line 4</label>
+                    <field id="line4_label" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="100" translate="label" type="text">
+                        <label>Line 4 Label</label>
+                    </field>
+                    <field id="line4_required" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="110" translate="label" type="select">
+                        <label>Line 4 Required</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    </field>
+                    <field id="line4_validation_classes" showInDefault="1" showInStore="1" showInWebsite="120" sortOrder="90" translate="label" type="text">
+                        <label>Line 4 Validation</label>
+                    </field>
+                </group>
             </group>
         </section>
     </system>
