@@ -4,18 +4,30 @@
         <customer>
             <experius_address_lines>
                 <enabled>0</enabled>
-                <line1_label>Street</line1_label>
-                <line1_required>1</line1_required>
-                <line1_validation_classes>max_text_length:255,min_text_length:1</line1_validation_classes>
-                <line2_label>Housenumber</line2_label>
-                <line2_required>1</line2_required>
-                <line2_validation_classes>validate-number:1</line2_validation_classes>
-                <line3_label>Addition</line3_label>
-                <line3_required>0</line3_required>
-                <line3_validation_classes>max_text_length:255,min_text_length:1</line3_validation_classes>
-                <line4_label></line4_label>
-                <line4_required></line4_required>
-                <line4_validation_classes></line4_validation_classes>
+                <experius_address_line1>
+                    <line_enabled>1</line_enabled>
+                    <line_label>Street</line_label>
+                    <line_required>1</line_required>
+                    <line_validation_classes>max_text_length:255,min_text_length:1</line_validation_classes>
+                </experius_address_line1>
+                <experius_address_line2>
+                    <line_enabled>0</line_enabled>
+                    <line_label>Housenumber</line_label>
+                    <line_required>1</line_required>
+                    <line_validation_classes>validate-number:1</line_validation_classes>
+                </experius_address_line2>
+                <experius_address_line3>
+                    <line_enabled>0</line_enabled>
+                    <line_label>Addition</line_label>
+                    <line_required>0</line_required>
+                    <line_validation_classes>max_text_length:255,min_text_length:1</line_validation_classes>
+                </experius_address_line3>
+                <experius_address_line4>
+                    <line_enabled>0</line_enabled>
+                    <line_label></line_label>
+                    <line_required></line_required>
+                    <line_validation_classes></line_validation_classes>
+                </experius_address_line4>
             </experius_address_lines>
         </customer>
     </default>
