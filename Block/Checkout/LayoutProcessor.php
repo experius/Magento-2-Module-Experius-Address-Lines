@@ -101,15 +101,23 @@ class LayoutProcessor implements \Magento\Checkout\Block\Checkout\LayoutProcesso
 
         $lineCount = 0;
 
-        while($lineCount<4){
-
+        while($lineCount < 4){
+ 
             $lineNumber = $lineCount+1;
 
             if(isset($addressResult['street']['children'][$lineCount])){
-                $addressResult['street']['children'][$lineCount]['label'] = ($this->addressLineHelper->getModuleConfig("line{$lineNumber}_label")) ? $this->addressLineHelper->getModuleConfig("line{$lineNumber}_label") : __('Address Line');
-                $addressResult['street']['children'][$lineCount]['additionalClasses'] = 'experius-address-line-one';
-                $addressResult['street']['children'][$lineCount]['validation'] = $this->addressLineHelper->getValidationClassesAsArrayForLine($lineNumber);
-                $addressResult['street']['children'][$lineCount]['required'] = ($this->addressLineHelper->getModuleConfig("line{$lineNumber}_required")) ? True : False;
+                $group = "experius_address_lines/experius_address_line{$lineNumber}";
+                //var_dump($group); die();
+                $label = ($this->addressLineHelper->getModuleConfig("line_label", $group)) 
+                         ? $this->addressLineHelper->getModuleConfig("line_label", $group) 
+                         : __('Address Line');
+                
+                if ( $this->addressLineHelper->getModuleConfig("line_enabled", $group)) {
+                    $addressResult['street']['children'][$lineCount]['label'] = $label;
+                    $addressResult['street']['children'][$lineCount]['additionalClasses'] = 'experius-address-line-one';
+                    $addressResult['street']['children'][$lineCount]['validation'] = $this->addressLineHelper->getValidationClassesAsArrayForLine($lineNumber);
+                    $addressResult['street']['children'][$lineCount]['required'] = ($this->addressLineHelper->getModuleConfig("line_required", $group)) ? True : False;
+                }
             }
 
             $lineCount++;

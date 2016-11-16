@@ -1,16 +1,13 @@
 {
-  "name": "experius/module-addresslines",
-  "description": "Adds labels to address lines of Magento 2 checkout and adds configuration per address line.",
+  "name": "experius/addresslines",
+  "description": "",
   "authors": [
     {
-      "name": "Derrick Heesbeen",
-      "email": "derrick@experius.nl"
+      "name": "Mage2Gen",
+      "email": "info@mage2gen.com"
     }
   ],
   "minimum-stability": "dev",
-  "license": [
-    "OSL-3.0"
-  ],
   "require": {},
   "autoload": {
     "files": [
