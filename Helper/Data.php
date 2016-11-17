@@ -21,25 +21,32 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     public function getModuleConfig($field = false, $group = false, $section = false)
     {
         $section = ($section) ? $section : 'customer';
-        $group = ($group) ? $group : 'experius_address_lines';
+        $group = ($group) ?  $group : 'experius_address_lines';
         $field = ($field) ? $field : 'enabled';
-        return $this->_scopeConfig->getValue($section.'/'.$group.'/'.$field, \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
+        //var_dump("{$section}/{$group}/{$field}"); exit();die();
+        return $this->_scopeConfig->getValue("{$section}/{$group}/{$field}", \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
     }
 
-    public function getValidationClassesAsArrayForLine($lineNumber){
-
-        $validationClassesString = $this->getModuleConfig("line{$lineNumber}_validation_classes");
-
-        $validationParts = explode(',',$validationClassesString);
+    public function getValidationClassesAsArrayForLine($lineNumber) 
+    {
+        $group = "experius_address_lines/experius_address_line{$lineNumber}";
+        
+        $validationClassesString = $this->getModuleConfig("line_validation_classes", $group);
+        //var_dump($validationClassesString);
+        $validationParts = explode(',', $validationClassesString);
+        //var_dump($validationParts); die();
 
         $validationClassesArray = [];
 
-        foreach($validationParts as $validationPart){
-            $validationPartArray = explode(':',$validationPart);
-            $validationClassesArray[$validationPartArray[0]] = (int) $validationPartArray[1];
+        foreach($validationParts as $validationPart) {
+            
+            $validationPartArray = explode(':', $validationPart);
+            if (empty($validationPartArray)) {
+                $validationClassesArray[$validationPartArray[0]] = (int) $validationPartArray[1];
+            }
         }
 
-        if($this->getModuleConfig("line{$lineNumber}_required")){
+        if($this->getModuleConfig("line_required", $group)){
             $validationClassesArray['required-entry'] = 1;
         }
 
