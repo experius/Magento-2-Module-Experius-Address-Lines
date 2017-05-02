@@ -9,6 +9,8 @@
                     <line_label>Street</line_label>
                     <line_required>1</line_required>
                     <line_validation_classes>max_text_length:255,min_text_length:1</line_validation_classes>
+                    <line_min_length>1</line_min_length>
+                    <line_max_length>255</line_max_length>
                 </experius_address_line1>
                 <experius_address_line2>
                     <line_enabled>0</line_enabled>
@@ -21,6 +23,7 @@
                     <line_label>Addition</line_label>
                     <line_required>0</line_required>
                     <line_validation_classes>max_text_length:255,min_text_length:1</line_validation_classes>
+                    <line_max_length>255</line_max_length>
                 </experius_address_line3>
                 <experius_address_line4>
                     <line_enabled>0</line_enabled>

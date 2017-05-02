@@ -21,6 +21,14 @@
                     <field id="line_validation_classes" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="30" translate="label" type="text">
                         <label>Line 1 Validation</label>
                     </field>
+                    <field id="line_min_length" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="30" translate="label" type="text">
+                        <label>Line 1 Min Length</label>
+                        <comment>Necessary for registrion page and address edit.</comment>
+                    </field>
+                    <field id="line_max_length" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="40" translate="label" type="text">
+                        <label>Line 1 Max Length</label>
+                        <comment>Necessary for registrion page and address edit.</comment>
+                    </field>
                 </group>
                 <group id="experius_address_line2" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="900" translate="label">
                     <label>Line 2</label>
@@ -37,6 +45,14 @@
                     </field>
                     <field id="line_validation_classes" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="20" translate="label" type="text">
                         <label>Line 2 Validation</label>
+                    </field>
+                    <field id="line_min_length" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="30" translate="label" type="text">
+                        <label>Line 2 Min Length</label>
+                        <comment>Necessary for registrion page and address edit.</comment>
+                    </field>
+                    <field id="line_max_length" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="40" translate="label" type="text">
+                        <label>Line 2 Max Length</label>
+                        <comment>Necessary for registrion page and address edit.</comment>
                     </field>
                 </group>
                 <group id="experius_address_line3" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="900" translate="label">
@@ -55,6 +71,14 @@
                     <field id="line_validation_classes" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="20" translate="label" type="text">
                         <label>Line 3 Validation</label>
                     </field>
+                    <field id="line_min_length" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="30" translate="label" type="text">
+                        <label>Line 3 Min Length</label>
+                        <comment>Necessary for registrion page and address edit.</comment>
+                    </field>
+                    <field id="line_max_length" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="40" translate="label" type="text">
+                        <label>Line 3 Max Length</label>
+                        <comment>Necessary for registrion page and address edit.</comment>
+                    </field>
                 </group>
                 <group id="experius_address_line4" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="900" translate="label">
                     <label>Line 4</label>
@@ -71,6 +95,14 @@
                     </field>
                     <field id="line_validation_classes" showInDefault="1" showInStore="1" showInWebsite="120" sortOrder="20" translate="label" type="text">
                         <label>Line 4 Validation</label>
+                    </field>
+                    <field id="line_min_length" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="30" translate="label" type="text">
+                        <label>Line 4 Min Length</label>
+                        <comment>Necessary for registrion page and address edit.</comment>
+                    </field>
+                    <field id="line_max_length" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="40" translate="label" type="text">
+                        <label>Line 4 Max Length</label>
+                        <comment>Necessary for registrion page and address edit.</comment>
                     </field>
                 </group>
             </group>
