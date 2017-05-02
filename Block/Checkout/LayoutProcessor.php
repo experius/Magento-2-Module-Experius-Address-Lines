@@ -106,11 +106,7 @@ class LayoutProcessor implements \Magento\Checkout\Block\Checkout\LayoutProcesso
             $lineNumber = $lineCount+1;
 
             if(isset($addressResult['street']['children'][$lineCount])){
-                $group = "experius_address_lines/experius_address_line{$lineNumber}";
-                //var_dump($group); die();
-                $label = ($this->addressLineHelper->getModuleConfig("line_label", $group)) 
-                         ? $this->addressLineHelper->getModuleConfig("line_label", $group) 
-                         : __('Address Line');
+                $label = $this->addressLineHelper->getLineLabel($lineNumber);
                 
                 if ( $this->addressLineHelper->getModuleConfig("line_enabled", $group)) {
                     $addressResult['street']['children'][$lineCount]['label'] = $label;
