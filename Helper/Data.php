@@ -17,6 +17,12 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
         return $this->scopeConfig->getValue("{$section}/{$group}/{$field}", \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
     }
 
+    public function isLineEnabled($lineNumber)
+    {
+        $group = "experius_address_lines/experius_address_line{$lineNumber}";
+        return $this->getModuleConfig("line_enabled", $group);
+    }
+
     public function getLineLabel($lineNumber)
     {
         $group = "experius_address_lines/experius_address_line{$lineNumber}";
