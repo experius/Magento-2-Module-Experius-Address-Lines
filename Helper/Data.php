@@ -1,11 +1,22 @@
 <?php
 namespace Experius\AddressLines\Helper;
-use Magento\Framework\DataObject;
+
+use Magento\Framework\App\ResourceConnection;
+use Magento\Eav\Model\ResourceModel\Entity\Attribute;
+
 class Data extends \Magento\Framework\App\Helper\AbstractHelper
 {
+    protected $resource;
+
+    protected $eavAttribute;
+
     public function __construct(
-        \Magento\Framework\App\Helper\Context $context
+        \Magento\Framework\App\Helper\Context $context,
+        ResourceConnection $resourceConnection,
+        Attribute $eavAttribute
     ) {
+        $this->resource = $resourceConnection;
+        $this->eavAttribute = $eavAttribute;
         parent::__construct($context);
     }
     public function getModuleConfig($field = false, $group = false, $section = false)
@@ -91,4 +102,24 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
         }
         return $validationClassesArray;
     }
+
+    /**
+     * Return form attribute IDs by form code
+     *
+     * @param string $formCode
+     * @return array
+     */
+    public function isUsedInForm($attributeCode, $formCode = 'customer_register_address', $entityType = \Magento\Customer\Api\AddressMetadataInterface::ENTITY_TYPE_ADDRESS)
+    {
+        $attributeId = $this->eavAttribute->getIdByCode( $entityType, $attributeCode);
+        $bind = ['attribute_id' => $attributeId, 'form_code' => $formCode];
+        $select = $this->resource->getConnection()->select()->from(
+            $this->resource->getTableName('customer_form_attribute'),
+            'attribute_id'
+        )->where(
+             'attribute_id = :attribute_id AND form_code = :form_code'
+        );
+        return $this->resource->getConnection()->fetchRow($select, $bind);
+    }
+
 }
