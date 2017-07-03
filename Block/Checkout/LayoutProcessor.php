@@ -95,8 +95,12 @@ class LayoutProcessor implements \Magento\Checkout\Block\Checkout\LayoutProcesso
             unset($addressResult['street']['children'][2]['validation']);
         }
 
+        if(isset($addressResult['street']['config']['template'])) {
+            $addressResult['street']['config']['template'] = 'Experius_AddressLines/group/group';
+        }
+
         if(isset($addressResult['street']['config']['additionalClasses'])) {
-            $addressResult['street']['config']['additionalClasses'] = 'street experius-address-lines';
+            $addressResult['street']['config']['additionalClasses'] = $addressResult['street']['config']['additionalClasses'] . ' experius-address-lines';
         }
 
         $lineCount = 0;
