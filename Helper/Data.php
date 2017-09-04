@@ -91,7 +91,9 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
         //var_dump($validationParts); die();
         $validationClassesArray = [];
         foreach($validationParts as $validationPart) {
-            
+            if (!$validationPart) {
+                continue;
+            }
             $validationPartArray = explode(':', $validationPart);
             if (!empty($validationPartArray)) {
                 $validationClassesArray[$validationPartArray[0]] = (int) $validationPartArray[1];
