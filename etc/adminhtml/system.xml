@@ -105,10 +105,13 @@
                         <comment>Necessary for registrion page and address edit.</comment>
                     </field>
                 </group>
-                <field id="shipping_po_box" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="1000"
-                       translate="label" type="select">
+                <field id="shipping_po_box" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="1000" translate="label" type="select">
                     <label>Allow PO Boxes in the Addresss lines?</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="shipping_po_box_error_msg" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="1001" translate="label" type="text">
+                    <label>PO Box error message</label>
+                    <comment>The error to show when the user enters a PO Box, parcel locker, etc.</comment>
                 </field>
             </group>
         </section>

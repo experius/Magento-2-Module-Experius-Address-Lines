@@ -111,16 +111,23 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
 
     public function getEnablePOBoxRule()
     {
-        $group = "experius_address_lines";
-
-        return !$this->getModuleConfig("shipping_po_box", $group);
+        return !$this->getModuleConfig("shipping_po_box", "experius_address_lines");
     }
 
+    public function getPOValidationRegex()
+    {
+        return '/^parcel.*|^locker.*|^box.*|.*po\s*box.*|.*p[\.\s]o\.?\sbox.*/i';
+    }
 
     public function getPOBoxRule($existingClasses)
     {
         $existingClasses['po-box-validation'] = true;
         return $existingClasses;
+    }
+
+    public function getPOErrorMessage()
+    {
+        return $this->getModuleConfig("shipping_po_box_error_msg", "experius_address_lines");
     }
 
     /**

@@ -78,7 +78,10 @@
             <?php endif; ?>
             <div class="field street required">
                 <label for="street" class="label"><span><?php /* @escapeNotVerified */ echo __('Street Address') ?></span></label>
-                <div class="control">
+                <?php if ($this->helper('Experius\AddressLines\Helper\Data')->getEnablePOBoxRule()): ?>
+                  <div class="info">PO Boxes not allowed</div>
+                <?php endif; ?>
+              <div class="control">
                     <label class="label" for="street_<?php /* @escapeNotVerified */ echo $_i ?>">
                         <span><?php /* @escapeNotVerified */ echo $this->helper('Experius\AddressLines\Helper\Data')->getLineLabel($_i) ?></span>
                     </label>
@@ -225,9 +228,9 @@ require([
     <?php if ($this->helper('Experius\AddressLines\Helper\Data')->getEnablePOBoxRule()): ?>
     $.validator.addMethod(
       'po-box-validation', function (value) {
-        var re = /^box.*|.*po\s+box.*|.*p[\.\s]o\.?\sbox.*/i;
+        var re = <?php echo $this->helper('Experius\AddressLines\Helper\Data')->getPOValidationRegex(); ?>;
         return !re.test(value);
-      }, $.mage.__("We don't ship to PO Boxes")
+      }, "<?php echo $this->helper('Experius\AddressLines\Helper\Data')->getPOErrorMessage(); ?>"
     );
     <?php endif; ?>
 });
