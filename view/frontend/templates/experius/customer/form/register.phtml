@@ -194,7 +194,9 @@
 <script>
 require([
     'jquery',
-    'mage/mage'
+    'jquery/validate',
+    'mage/mage',
+    'mage/translate'
 ], function($){
 
     var dataForm = $('#form-validate');
@@ -220,8 +222,17 @@ require([
     <?php endif ?>
     }).find('input:text').attr('autocomplete', 'off');
 
+    <?php if ($this->helper('Experius\AddressLines\Helper\Data')->getEnablePOBoxRule()): ?>
+    $.validator.addMethod(
+      'po-box-validation', function (value) {
+        var re = /^box.*|.*po\s+box.*|.*p[\.\s]o\.?\sbox.*/i;
+        return !re.test(value);
+      }, $.mage.__("We don't ship to PO Boxes")
+    );
+    <?php endif; ?>
 });
 </script>
+
 <?php if ($block->getShowAddressFields()): ?>
 <script type="text/x-magento-init">
     {

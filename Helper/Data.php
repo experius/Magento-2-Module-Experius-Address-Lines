@@ -81,7 +81,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
         return $validationClassesString;
     }
 
-    public function getValidationClassesAsArrayForLine($lineNumber) 
+    public function getValidationClassesAsArrayForLine($lineNumber)
     {
         $group = "experius_address_lines/experius_address_line{$lineNumber}";
 
@@ -102,7 +102,25 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
         if($this->isLineRequired($lineNumber)){
             $validationClassesArray['required-entry'] = 1;
         }
+        if ($this->getEnablePOBoxRule()) {
+            $validationClassesArray = $this->getPOBoxRule($validationClassesArray);
+        }
+        $this->_logger->debug(print_r($validationClassesArray, true));
         return $validationClassesArray;
+    }
+
+    public function getEnablePOBoxRule()
+    {
+        $group = "experius_address_lines";
+
+        return !$this->getModuleConfig("shipping_po_box", $group);
+    }
+
+
+    public function getPOBoxRule($existingClasses)
+    {
+        $existingClasses['po-box-validation'] = true;
+        return $existingClasses;
     }
 
     /**

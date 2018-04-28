@@ -107,7 +107,7 @@
                 </group>
                 <field id="shipping_po_box" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="1000"
                        translate="label" type="select">
-                    <label>Allow PO Boxes in the Shipping Addresss?</label>
+                    <label>Allow PO Boxes in the Addresss lines?</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
             </group>

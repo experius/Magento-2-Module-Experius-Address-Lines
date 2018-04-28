@@ -178,3 +178,20 @@
         }
     }
 </script>
+
+<?php if ($this->helper('Experius\AddressLines\Helper\Data')->getEnablePOBoxRule()): ?>
+<script type="text/javascript">
+  require([
+    'jquery',
+    'jquery/validate',
+    'mage/translate'
+  ], function ($) {
+    $.validator.addMethod(
+      'po-box-validation', function (value) {
+        var re = /^box.*|.*po\s+box.*|.*p[\.\s]o\.?\sbox.*/i;
+        return !re.test(value);
+      }, $.mage.__("We don't ship to PO Boxes")
+    );
+  });
+</script>
+<?php endif; ?>

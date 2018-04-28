@@ -31,6 +31,7 @@
                     <line_required></line_required>
                     <line_validation_classes></line_validation_classes>
                 </experius_address_line4>
+                <shipping_po_box>1</shipping_po_box>
             </experius_address_lines>
         </customer>
     </default>
