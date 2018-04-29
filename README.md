@@ -1,4 +1,4 @@
-**Experius Address Lines,**
+**Experius Address Lines**
 
 Adds labels to address lines and adds configuration per address line.
 
@@ -7,6 +7,8 @@ Configuration Per Line
 - Required Entry Yes/No
 - Label
 - Validation Classes
+
+Also has an option for disabling PO Boxes in the address
 
 Stores > Configuration > Customers > Customer Configuration > Address Lines
 
