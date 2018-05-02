@@ -125,11 +125,6 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
         return $existingClasses;
     }
 
-    public function getPOErrorMessage()
-    {
-        return $this->getModuleConfig("shipping_po_box_error_msg", "experius_address_lines");
-    }
-
     /**
      * Return form attribute IDs by form code
      *

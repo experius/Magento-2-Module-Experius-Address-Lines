@@ -33,7 +33,6 @@
                     <line_validation_classes></line_validation_classes>
                 </experius_address_line4>
                 <shipping_po_box>1</shipping_po_box>
-                <shipping_po_box_error_msg>We don't ship to PO Boxes, Parcel Lockers, or any postal service. Courier only.</shipping_po_box_error_msg>
             </experius_address_lines>
         </customer>
     </default>
