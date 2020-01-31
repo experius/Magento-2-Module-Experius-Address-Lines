@@ -23,7 +23,7 @@
         <?php echo $block->getNameBlockHtml() ?>
         <?php if ($this->helper('Experius\AddressLines\Helper\Data')->isUsedInForm('company')): ?>
             <?php $attributeValidationClass = $this->helper('Magento\Customer\Helper\Address')->getAttributeValidationClass('company'); ?>
-            <div class="field company<?php echo (strpos($attributeValidationClass, 'required-entry')) ? ' required' : '' ?>">
+            <div class="field company<?php echo ((strpos($attributeValidationClass, 'required-entry')) !== false) ? ' required' : '' ?>">
                 <label class="label" for="company"><span><?php /* @escapeNotVerified */ echo __('Company') ?></span></label>
                 <div class="control">
                     <input type="text" name="company" id="company" title="<?php /* @escapeNotVerified */ echo __('Company') ?>" value="<?php echo $block->escapeHtml($block->getAddress()->getCompany()) ?>" class="input-text <?php /* @escapeNotVerified */ echo $attributeValidationClass ?>"/>
@@ -32,7 +32,7 @@
         <?php endif; ?>
         <?php if ($this->helper('Experius\AddressLines\Helper\Data')->isUsedInForm('telephone')): ?>
             <?php $attributeValidationClass = $this->helper('Magento\Customer\Helper\Address')->getAttributeValidationClass('telephone'); ?>
-            <div class="field telephone<?php echo (strpos($attributeValidationClass, 'required-entry')) ? ' required' : '' ?>">
+            <div class="field telephone<?php echo ((strpos($attributeValidationClass, 'required-entry')) !== false) ? ' required' : '' ?>">
                 <label class="label" for="telephone"><span><?php /* @escapeNotVerified */ echo __('Phone Number') ?></span></label>
                 <div class="control">
                     <input type="text" name="telephone" value="<?php echo $block->escapeHtml($block->getAddress()->getTelephone()) ?>" title="<?php /* @escapeNotVerified */ echo __('Phone Number') ?>" class="input-text <?php /* @escapeNotVerified */ echo $attributeValidationClass ?>" id="telephone"/>
