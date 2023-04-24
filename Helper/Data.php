@@ -25,7 +25,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
         $group = ($group) ?  $group : 'experius_address_lines';
         $field = ($field) ? $field : 'enabled';
         //var_dump("{$section}/{$group}/{$field}"); exit();die();
-        return $this->scopeConfig->getValue("{$section}/{$group}/{$field}", \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
+        return $this->scopeConfig->getValue("{$section}/{$group}/{$field}", \Magento\Store\Model\ScopeInterface::SCOPE_STORE) ?? '';
     }
 
     public function isLineEnabled($lineNumber)
