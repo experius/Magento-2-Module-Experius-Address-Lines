@@ -1,6 +1,9 @@
 <?php
-\Magento\Framework\Component\ComponentRegistrar::register(
-    \Magento\Framework\Component\ComponentRegistrar::MODULE,
-    'Experius_AddressLines',
-    __DIR__
-);
+/**
+ * Copyright © Happy Horizon Utrecht Development & Technology B.V. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+use Magento\Framework\Component\ComponentRegistrar;
+
+ComponentRegistrar::register(ComponentRegistrar::MODULE, 'Experius_AddressLines', __DIR__);
+

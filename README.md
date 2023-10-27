@@ -1,6 +1,6 @@
-**Experius Address Lines,**
+# Experius Address Lines
 
-Adds labels to address lines and adds configuration per address line.
+Add labels to address lines and configuration for each address line.
 
 Configuration Per Line
 

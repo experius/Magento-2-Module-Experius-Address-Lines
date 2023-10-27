@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!--
 /**
- * Copyright © 2016 Magento. All rights reserved.
+ * Copyright © Happy Horizon Utrecht Development & Technology B.V. All rights reserved.
  * See COPYING.txt for license details.
  */
 -->
@@ -10,7 +10,7 @@
     <body>
         <referenceBlock name="customer_form_register">
             <action method="setTemplate" ifconfig="customer/experius_address_lines/enabled">
-                <argument name="template" xsi:type="string">Experius_AddressLines::/experius/customer/form/register.phtml</argument>
+                <argument name="template" xsi:type="string">Experius_AddressLines::experius/customer/form/register.phtml</argument>
             </action>
         </referenceBlock>
     </body>

@@ -27,9 +27,9 @@
                 </experius_address_line3>
                 <experius_address_line4>
                     <line_enabled>0</line_enabled>
-                    <line_label></line_label>
-                    <line_required></line_required>
-                    <line_validation_classes></line_validation_classes>
+                    <line_label/>
+                    <line_required/>
+                    <line_validation_classes/>
                 </experius_address_line4>
             </experius_address_lines>
         </customer>

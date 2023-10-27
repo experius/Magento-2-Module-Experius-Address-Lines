@@ -1,20 +1,28 @@
 {
-  "name": "experius/module-addresslines",
-  "description": "",
-  "authors": [
-    {
-      "name": "Mage2Gen",
-      "email": "info@mage2gen.com"
-    }
-  ],
-  "minimum-stability": "dev",
-  "require": {},
-  "autoload": {
-    "files": [
-      "registration.php"
+    "name": "experius/module-addresslines",
+    "description": "Add labels to address lines and configuration for each address line.",
+    "type": "magento2-module",
+    "license": "OSL-3.0",
+    "authors": [
+        {
+            "name": "Mage2Gen",
+            "email": "info@mage2gen.com"
+        },
+        {
+            "name": "Boris van Katwijk",
+            "email": "borisvankatwijk@happyhorizon.com"
+        }
     ],
-    "psr-4": {
-      "Experius\\AddressLines\\": ""
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=8.1"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Experius\\AddressLines\\": ""
+        }
     }
-  }
 }

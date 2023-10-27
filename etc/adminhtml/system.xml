@@ -6,7 +6,7 @@
             <group id="experius_address_lines" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="900" translate="label">
                 <label>Address Lines</label>
                 <field id="enabled" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
-                    <label>enabled</label>
+                    <label>Enabled</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
                 <group id="experius_address_line1" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="900" translate="label">
@@ -33,7 +33,7 @@
                 <group id="experius_address_line2" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="900" translate="label">
                     <label>Line 2</label>
                     <field id="line_enabled" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="5" translate="label" type="select">
-                        <label>enabled</label>
+                        <label>Enabled</label>
                         <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                     </field>
                     <field id="line_required" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
@@ -58,7 +58,7 @@
                 <group id="experius_address_line3" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="900" translate="label">
                     <label>Line 3</label>
                     <field id="line_enabled" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="5" translate="label" type="select">
-                        <label>enabled</label>
+                        <label>Enabled</label>
                         <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                     </field>
                     <field id="line_required" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
@@ -83,7 +83,7 @@
                 <group id="experius_address_line4" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="900" translate="label">
                     <label>Line 4</label>
                     <field id="line_enabled" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="5" translate="label" type="select">
-                        <label>enabled</label>
+                        <label>Enabled</label>
                         <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                     </field>
                     <field id="line_required" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
