@@ -17,6 +17,13 @@ $directoryHelper = $block->getData('directoryHelper');
 /** @var \Magento\Customer\ViewModel\Address\RegionProvider $regionProvider */
 $regionProvider = $block->getRegionProvider();
 $formData = $block->getFormData();
+/** @var \Magento\Customer\ViewModel\CreateAccountButton $createAccountButtonViewModel */
+$createAccountButtonViewModel = $block->getData('create_account_button_view_model');
+
+if(!$createAccountButtonViewModel){
+    $createAccountButtonViewModel = $block->getData('customer_create_form_submit');
+}
+
 /** @var \Experius\AddressLines\Helper\Data $experiusAddressLinesHelper */
 $experiusAddressLinesHelper = $this->helper('Experius\AddressLines\Helper\Data');
 ?>
@@ -310,9 +317,7 @@ $experiusAddressLinesHelper = $this->helper('Experius\AddressLines\Helper\Data')
             <button type="submit"
                     class="action submit primary"
                     title="<?= $escaper->escapeHtmlAttr(__('Create an Account')) ?>"
-                <?php if ($block->getButtonLockManager()->isDisabled('customer_create_form_submit')): ?>
-                    disabled="disabled"
-                <?php endif; ?>>
+                <?php if ($createAccountButtonViewModel->disabled()): ?> disabled="disabled" <?php endif; ?>>
                 <span><?= $escaper->escapeHtml(__('Create an Account')) ?></span>
             </button>
         </div>
