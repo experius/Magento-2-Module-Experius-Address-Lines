@@ -101,8 +101,8 @@ $minLength = $experiusAddressLinesHelper->getValidationMinLength(1);
                                        title="<?= $escaper->escapeHtmlAttr($experiusAddressLinesHelper->getLineLabel($_i + 1)) ?>"
                                        id="street_<?= /* @noEscape */ $_i + 1 ?>"
                                        class="input-text <?= $_updatedStreetValidationClass ?>"
-                                    <?= $maxLength ? 'maxlength="' . $maxLength . '"' : ''; ?>
-                                    <?= $minLength ? 'minlength="' . $minLength . '"' : ''; ?>
+                                    <?= $maxLength ? 'maxlength="' . $escaper->escapeHtmlAttr($maxLength) . '"' : ''; ?>
+                                    <?= $minLength ? 'minlength="' . $escaper->escapeHtmlAttr($minLength) . '"' : ''; ?>
                                 >
                             </div>
                         </div>

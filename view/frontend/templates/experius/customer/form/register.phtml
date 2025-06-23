@@ -116,8 +116,8 @@ $experiusAddressLinesHelper = $this->helper('Experius\AddressLines\Helper\Data')
                            title="<?= $escaper->escapeHtmlAttr($experiusAddressLinesHelper->getLineLabel(1)) ?>"
                            id="street_1"
                            class="input-text <?= $escaper->escapeHtmlAttr($_updatedStreetValidationClass) ?>"
-                        <?= $maxLength ? 'maxlength="' . $maxLength . '"' : ''; ?>
-                        <?= $minLength ? 'minlength="' . $minLength . '"' : ''; ?>
+                        <?= $maxLength ? 'maxlength="' . $escaper->escapeHtmlAttr($maxLength) . '"' : ''; ?>
+                        <?= $minLength ? 'minlength="' . $escaper->escapeHtmlAttr($minLength) . '"' : ''; ?>
                     >
                     <div class="nested">
                         <?php
@@ -139,12 +139,12 @@ $experiusAddressLinesHelper = $this->helper('Experius\AddressLines\Helper\Data')
                                 <div class="control">
                                     <input type="text"
                                            name="street[<?= /* @noEscape */ $_i ?>]"
-                                           value="<?= $escaper->escapeHtml($formData->getStreetLine($_i - 1)) ?>"
+                                           value="<?= $escaper->escapeHtmlAttr($formData->getStreetLine($_i - 1)) ?>"
                                            title="<?= $escaper->escapeHtmlAttr($experiusAddressLinesHelper->getLineLabel($_i)) ?>"
                                            id="street_<?= /* @noEscape */ $_i ?>"
-                                           class="input-text <?= $_updatedStreetValidationClass ?>"
-                                        <?= $maxLength ? 'maxlength="' . $maxLength . '"' : ''; ?>
-                                        <?= $minLength ? 'minlength="' . $minLength . '"' : ''; ?>
+                                           class="input-text <?= $escaper->escapeHtmlAttr($_updatedStreetValidationClass) ?>"
+                                        <?= $maxLength ? 'maxlength="' . $escaper->escapeHtmlAttr($maxLength) . '"' : ''; ?>
+                                        <?= $minLength ? 'minlength="' . $escaper->escapeHtmlAttr($minLength) . '"' : ''; ?>
                                     >
                                 </div>
                             </div>
